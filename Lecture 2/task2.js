@@ -4,13 +4,7 @@ function createObjects(name, age) {
         this.age = age;
     }
 
-    function PersonWithPrototype(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    PersonWithPrototype.prototype.introduction = function () {
-        return `Hi, my name is ${this.name} and I'm ${this.age} years old.`;
-    };
+    const person2 = Object.assign({}, { name: name, age: age });
 
     function PersonWithGetterSetter(name, age) {
         this._name = name;
@@ -34,15 +28,13 @@ function createObjects(name, age) {
     });
 
     const person1 = new Person(name, age);
-    const person2 = new PersonWithPrototype(name, age);
     const person3 = new PersonWithGetterSetter(name, age);
 
     return [person1, person2, person3];
 }
 
-// Example usage:
-const name = "John";
-const age = 30;
+const name = "Zhanel";
+const age = 24;
 const arrayOfObjects = createObjects(name, age);
 
 arrayOfObjects.forEach((person, index) => {
