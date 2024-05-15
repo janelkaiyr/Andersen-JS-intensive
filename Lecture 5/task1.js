@@ -30,8 +30,8 @@ class Stack {
         if (this.stack.length === 0) {
             throw new Error('stack is empty');
         }
-        this.stack.pop()
-        return this.stack
+        
+        return this.stack.pop()
     }
     peek() {
         if (this.stack.length === 0) {
