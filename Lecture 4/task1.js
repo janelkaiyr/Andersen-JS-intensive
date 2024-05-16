@@ -13,17 +13,18 @@ const logSumRef = calculator.logSum;
 console.log(logSumRef()); // still works */
 
 class Calculator {
-    constructor(first, second) {
-        if (this.isValidNumber(first) && this.isValidNumber(second)) {
-            this.first = first;
-            this.second = second;
-
-            this.logSum = this.logSum.bind(this);
-            this.logMul = this.logMul.bind(this);
-            this.logSub = this.logSub.bind(this);
-            this.logDiv = this.logDiv.bind(this);
+     constructor(first, second) {
+        if (!this.isValidNumber(first) || !this.isValidNumber(second)) {
+            throw new Error('Enter valid number');
         }
-        else throw new Error("Enter valid number");
+
+        this.first = first;
+        this.second = second;
+
+        this.logSum = this.logSum.bind(this);
+        this.logMul = this.logMul.bind(this);
+        this.logSub = this.logSub.bind(this);
+        this.logDiv = this.logDiv.bind(this);
     }
     isValidNumber(num) {
         return typeof num === 'number' && isFinite(num);
