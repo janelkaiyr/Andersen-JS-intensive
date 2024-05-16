@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 6 Task2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        div {
+            width: 45%;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        p {
+            font-size: 40px;
+        }
+
+        input {
+            height: 30px;
+            margin-bottom: 50px;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stopwatch">
+        <h1>Stopwatch</h1>
+        <p id="stopwatch__time">00:00:00</p>
+        <button id="stopwatch__start">start</button>
+        <button id="stopwatch__stop">stop</button>
+        <button id="stopwatch__reset">reset</button>
+    </div>
+    <div class="timer">
+        <h1>Timer</h1>
+        <p id="timer__time">00:00:00</p>
+        <input type="text" id="timer__input" placeholder="Enter time (hh:mm:ss)"><br>
+
+        <button id="timer__start">Start</button>
+        <button id="timer__stop">Stop</button>
+        <button id="timer__reset">Reset</button>
+    </div>
+    <script src="task2.js"></script>
+
+</body>
+
+</html>
